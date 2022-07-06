@@ -1,0 +1,123 @@
+                    .details {
+                        text-align: center;
+                        color: $white-color;
+                        background-image: url(../../assets/img/Home_1_paralax.jpg);
+                        background-attachment: fixed;
+                        padding-top: 150px;
+                        padding-bottom: 150px;
+                        p {
+                            font-size: 1.6rem;
+                            font-style: italic;
+                            letter-spacing: 5px;
+                            margin-bottom: 15px;
+                        }
+                        h2 {
+                            font-size: 4rem;
+                            font-weight: bolder !important;
+                            margin-bottom: 15px;
+                        }
+                        .divider {
+                            width: 80px;
+                            height: 1px;
+                            background-color: $white-color;
+                            margin: auto;
+                            margin-bottom: 40px;
+                        }
+                        img {
+                            max-width: 90%!important;
+                            height: auto;
+                        }
+                        .one {
+                            width: 28px;
+                            height: 28px;
+                            line-height: 23px;
+                            border: 4px solid #fff;
+                            background-color: #fff;
+                            border-radius: 100%;
+                            position: absolute;
+                            margin-top: -9px;
+                            margin-left: -9px;
+                            cursor: pointer;
+                            z-index: 5;
+                            transition: all .5s ease-in-out;
+                            opacity: 1;
+                            box-shadow: 0px 2px 5px 1px rgba($secondary, .2);
+                            text-align: center;
+                            font-size: 12px;
+                            color: $white-color;
+                            &:after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: -10px;
+                                left: -10px;
+                                bottom: -10px;
+                                right: -10px;
+                            }
+                            i {
+                                background-color: $primary;
+                                padding: 4px 5px;
+                                border-radius: 50%;
+                            }
+                            .text {
+                                position: absolute;
+                                z-index: 200;
+                                left: 40px;
+                                margin-bottom: 5px;
+                                padding: 10px 15px;
+                                width: 250px;
+                                background-color: $white-color;
+                                text-align: left;
+                                font-size: 16px;
+                                text-align: center;
+                                box-shadow: 0px 2px 5px 1px rgba($secondary, .9);
+                                color: #8d8d8d;
+                                visibility: hidden;
+                                &.last {
+                                    left: -250px;
+                                }
+                            }
+                            &:hover {
+                                .text {
+                                    visibility: visible;
+                                }
+                                line-height: 27px;
+                                width: 32px;
+                                height: 32px;
+                                margin-left: -11px;
+                                margin-top: -11px;
+                            }
+                        }
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .details {
+                            .one {
+                                &.three {
+                                    left: 88%!important;
+                                }
+                            }
+                        }
+                    }
+                    
+                    @media (max-width: 576px) {
+                        .details {
+                            p {
+                                font-size: 1rem;
+                            }
+                            h2 {
+                                font-size: 2rem;
+                            }
+                            .one {
+                                .text {
+                                    font-size: 10px;
+                                    padding: 5px;
+                                    width: 150px;
+                                    left: 20px;
+                                    &.last {
+                                        left: -150px;
+                                    }
+                                }
+                            }
+                        }
+                    }

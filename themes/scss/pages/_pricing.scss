@@ -1,0 +1,126 @@
+.pricing {
+    padding-top: 130PX;
+    padding-bottom: 130PX;
+    text-align: center;
+    background-color: white;
+    P {
+        font-size: 1.5rem;
+        font-style: italic;
+        letter-spacing: 5px;
+        color: rgba($secondary, .5);
+    }
+    h2 {
+        font-size: 4rem;
+        font-weight: bolder!important;
+        color: rgba($black-color, .7);
+        span {
+            font-size: 1.6rem;
+        }
+    }
+    .divider {
+        width: 100px;
+        height: 1px;
+        background-color: rgba($secondary, .2);
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .center {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 30px;
+        background-color: white;
+        z-index: 1000;
+        li,
+        .card {
+            background-color: white;
+        }
+        transform: scale(1.1);
+        .btn {
+            padding: 10px 20px;
+            background-color: $primary;
+            color: white;
+            font-weight: bold;
+            transition: all .5s linear;
+            &:hover {
+                background-color: #3bb1cc;
+            }
+        }
+    }
+    .right {
+        background-size: cover;
+        background-position: 50% 50%;
+        padding: 0 15px;
+        margin: 0;
+        transition: all .3s ease-in-out!important;
+    }
+}
+
+.col-md-4 {
+    background-color: #fbfbfb;
+    li {
+        padding: 15px;
+        color: rgba($secondary, .5);
+        span {
+            color: rgba($secondary, .7);
+            font-weight: bold;
+        }
+        &.last {
+            border-bottom: 1px solid rgba(108, 117, 125, 0.2)!important;
+        }
+    }
+    li,
+    .card {
+        background-color: #fbfbfb;
+    }
+    .btn {
+        padding: 10px 20px;
+        background-color: #eeebeb;
+        color: rgba($secondary, .5);
+        font-weight: bold;
+        &:hover {
+            background-color: #d2d2d2;
+        }
+    }
+}
+
+.card {
+    background-color: #fbfbfb;
+    border: none;
+    padding-top: 20px;
+}
+
+h6 {
+    font-size: 1.5rem;
+    font-weight: bolder!important;
+    color: rgba($black-color, .7);
+}
+
+@media (max-width: 850px) {
+    .pricing {
+        padding-top: 50px;
+        .center {
+            transform: scale(1);
+            padding: 10px;
+            margin-right: 0!important;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing {
+        P {
+            font-size: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            span {
+                font-size: .6rem;
+            }
+        }
+        .center {
+            transform: scale(1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

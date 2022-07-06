@@ -1,0 +1,50 @@
+.img-comp-container {
+    position: relative;
+    height: 300px;
+    /*should be the same height as the images*/
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.img-comp-img img {
+    display: block;
+    vertical-align: middle;
+}
+
+.img-comp-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: $primary;
+    border: 4px solid $white-color;
+    border-radius: 50%;
+}
+
+@media (max-width: 991px) {
+    .img-comp-container {
+        margin: 50px 0;
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 680px) {
+    .img-comp-container {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .img-comp-container {
+        margin-left: 1px;
+    }
+}

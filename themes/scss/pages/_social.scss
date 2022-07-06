@@ -1,0 +1,79 @@
+.social {
+    text-align: center;
+    p {
+        font-size: 1.1rem;
+        font-style: italic;
+        letter-spacing: 5px;
+        color: rgba($secondary, .5);
+    }
+    h3 {
+        font-size: 2.1rem;
+        font-weight: bolder!important;
+        color: rgba($black-color, .7);
+    }
+    .twitter {
+        padding: 200px 15px 190px 15px;
+        background-image: url(../../assets/img/Soc_twit.png);
+        height: 100%;
+        background-color: white;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        h3:hover {
+            color: rgb(90, 201, 248);
+        }
+    }
+    .facebook {
+        padding: 200px 15px 190px 15px;
+        background-color: #f7f7f7;
+        background-image: url(../../assets/img/Soc_fb.png);
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        h3:hover {
+            color: rgb(9, 99, 254);
+        }
+    }
+    .youtube {
+        padding: 200px 15px 190px 15px;
+        background-image: url(../../assets/img/Soc_yt.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-color: #ececec;
+        h3:hover {
+            color: rgb(254, 9, 9);
+        }
+    }
+}
+
+.texttype {
+    background-color: $primary;
+    padding: 50px 10px;
+    color: white;
+    h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    .btn {
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: 2px solid white;
+    }
+}
+
+@media (max-width: 576px) {
+    .social {
+        .twitter,
+        .facebook,
+        .youtube {
+            padding: 80px 10px!important;
+        }
+    }
+    .texttype {
+        h1 {
+            font-size: 2rem!important;
+            font-weight: bolder;
+        }
+    }
+}

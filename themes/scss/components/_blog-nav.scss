@@ -1,0 +1,18 @@
+.blog-nav {
+    background-color: white;
+    .navbar-toggler {
+        i {
+            color: $secondary;
+        }
+    }
+    .nav-link,
+    .nav-item svg {
+        color: $secondary;
+    }
+    .nav-item {
+        padding: 30px 10px;
+        .badge {
+            background-color: #294cfe;
+        }
+    }
+}

@@ -1,0 +1,160 @@
+  nav {
+      font-weight: bold;
+      .navbar-brand {
+          padding: 30px 10px;
+      }
+      .navbar-toggler {
+          background-color: transparent;
+          i {
+              color: $white-color;
+              font-size: 30px;
+          }
+      }
+      .show {
+          background-color: rgba($white-color, 0.9);
+          position: absolute;
+          display: none;
+          z-index: 1000;
+          width: 250px;
+          top: 90px;
+          left: -100px;
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+          transition: all .5s ease-in-out;
+          p {
+              color: $secondary;
+              font-size: 14px;
+          }
+      }
+      .cart:hover {
+          .show {
+              display: block;
+          }
+      }
+      .nav-item {
+          svg {
+              color: white;
+              margin-left: 7px;
+          }
+      }
+      .dropdown {
+          position: relative;
+          display: inline-block;
+          transition: 0.5s all linear;
+          .dropmenu {
+              padding: 20px;
+              position: absolute;
+              background-color: #ffffff;
+              transform: translateY(-5%);
+              opacity: 0;
+              transition: 0.5s all ease-in-out;
+              z-index: -100;
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+              visibility: hidden;
+              width: 1150px;
+              top: 90px;
+              left: -350px;
+              border-radius: 5px;
+              &.single {
+                  width: 250px;
+                  left: 0;
+                  ul {
+                      border: none!important;
+                  }
+              }
+              &.var {
+                  left: -680px;
+              }
+              &.element {
+                  left: -800px;
+              }
+              ul {
+                  list-style-type: none;
+                  width: 200px;
+                  height: auto;
+                  border-right: 1px solid rgb(204, 204, 204);
+                  padding: 0;
+                  &.last {
+                      border-right: none;
+                  }
+              }
+              ul li {
+                  padding: 10px;
+                  font-size: 12px;
+                  transition: margin-left 0.5s linear, background-color 0.5s linear;
+                  cursor: pointer;
+              }
+              ul li:hover {
+                  margin-left: 20px;
+                  font-weight: 600;
+                  background-color: #294cfe;
+                  color: white;
+              }
+          }
+          &:hover {
+              .dropmenu {
+                  opacity: 1;
+                  transform: translateY(0);
+                  visibility: visible;
+              }
+          }
+      }
+      .nav-item {
+          padding: 30px 10px;
+          .badge {
+              top: 25px;
+              left: 25px;
+              padding: 1px 6px!important;
+              background-color: $primary;
+          }
+          .nav-link {
+              padding: 0;
+          }
+          a {
+              color: $white-color;
+              font-size: 14px;
+          }
+      }
+      border-bottom: 0.1px solid rgba($secondary, 0.2);
+  }
+  
+  .scrolled {
+      background: rgba($white-color, 0.9)!important;
+      .navbar-toggler {
+          i {
+              color: $secondary;
+          }
+      }
+      .navbar-brand {
+          display: none;
+      }
+      .navbar-brand2 {
+          display: block!important;
+          padding: 10px !important;
+      }
+      .nav-item {
+          padding: 10px !important;
+          a,
+          svg {
+              color: $secondary;
+          }
+          .badge {
+              top: 10px;
+              left: 25px;
+          }
+      }
+      .dropmenu {
+          top: 50px!important;
+      }
+  }
+  
+  @media (max-width: 992px) {
+      .navbar {
+          .nav-link {
+              padding: 8px !important;
+              width: 15px;
+              height: 15px;
+          }
+      }
+  }

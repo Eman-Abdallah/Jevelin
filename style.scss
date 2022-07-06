@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'raleway';
+    list-style: none;
+    text-decoration: none;
+}
+
+@import"./themes/scss/plugins/plugin.scss";
+@import"./themes/scss/global/_font.scss";
+@import"./themes/scss/global/_var.scss";
+@import"./themes/scss/components/_preloader.scss";
+@import"./themes/scss/components/_header.scss";
+@import"./themes/scss/pages/_home.scss";
+@import"./themes/scss//components/_sidebar.scss";
+@import"./themes/scss/pages/_about.scss";
+@import"./themes/scss/pages/_portfolio.scss";
+@import"./themes/scss/components/_comare-image.scss";
+@import"./themes/scss/pages/skills.scss";
+@import"./themes/scss/pages/_blog.scss";
+@import"./themes/scss/pages/_testmonials.scss";
+@import"./themes/scss/pages/_pricing.scss";
+@import"./themes/scss/pages/_details.scss";
+@import"./themes/scss/pages/_social.scss";
+@import"./themes/scss/components/_footer.scss";
+@import"./themes/scss/pages/blog-page/_first-blog.scss";
+@import"./themes/scss/pages/blog-page/_related-posts.scss";
+@import"./themes/scss/components/_blog-nav.scss";
+@import"./themes/scss/components/_tooltip.scss";

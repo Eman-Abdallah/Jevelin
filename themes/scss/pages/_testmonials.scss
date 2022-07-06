@@ -1,0 +1,80 @@
+    .testmonial {
+        background-color: white;
+        .swip {
+            padding-top: 300px;
+            height: 800px;
+            background: url(../../assets/img/Agency_partners.jpg) no-repeat center center;
+            background-size: cover;
+            .swiper {
+                height: 200px!important;
+            }
+        }
+        svg {
+            color: rgba($secondary, .5);
+        }
+        .content {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            height: 800px;
+            padding-top: 100px;
+            margin-top: 0;
+            .swiper {
+                height: 600px;
+                .swiper-slide {
+                    display: block;
+                }
+            }
+            h2 {
+                color: rgba($black-color, .7);
+                font-weight: bolder!important;
+                margin-bottom: 15px;
+            }
+            img {
+                border-radius: 50%;
+                width: 100px;
+                margin-bottom: 10px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: block;
+            position: absolute;
+            top: 30px;
+            background-color: transparent;
+        }
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 30px;
+            color: rgba($secondary, .5);
+        }
+    }
+    
+    @media (max-width: 769px) {
+        .testmonial {
+            .swip {
+                padding-top: 50px;
+                height: 400px;
+                .swiper {
+                    height: 200px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .testmonial {
+            .swip {
+                padding-top: 50px;
+                height: 400px;
+                .swiper {
+                    height: 200px;
+                }
+            }
+            .content {
+                padding-top: 50px;
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }

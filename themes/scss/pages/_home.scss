@@ -1,0 +1,240 @@
+.mySwiper {
+    width: 100%;
+    height: 100vh !important;
+    position: relative;
+    padding: 0!important;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(75, 75, 75);
+    .home {
+        right: 0px;
+        animation: moving 2s normal forwards;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%!important;
+        transition: all 0.5s ease-in-out;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: -1000;
+        }
+    }
+    .slide1 {
+        background-image: url(../../assets/img/Home_1_slide_1.jpg);
+        width: 100%;
+        height: 100%;
+        .bg {
+            background: url(../../assets/img/Home_1_slide_element_1.png) center center no-repeat;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            animation: fade 1s forwards 3s ease-in-out;
+            h1 {
+                animation: movingT 1s forwards 2s ease-in-out;
+            }
+        }
+    }
+    .slide2 {
+        background-image: url(../../assets/img/Home_1_slide_2.jpg);
+        width: 100%;
+        height: 100%;
+        .content {
+            h1 {
+                animation: movingT 1s forwards 5s ease-in-out;
+            }
+        }
+    }
+    .slide3 {
+        background-image: url(../../assets/img/Home_1_slide_3.jpg);
+        width: 100%;
+        height: 100%;
+        .content {
+            h1 {
+                animation: movingT 1s forwards 10s ease-in-out;
+            }
+            a {
+                animation: fade 1s forwards 11s ease-in-out;
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        margin-top: 14em;
+        color: $white-color;
+        z-index: 3;
+        padding: 0!important;
+        transition: all 0.5s ease-in-out;
+        h1 {
+            font-size: 4rem;
+            font-weight: bolder !important;
+            margin-bottom: 10px;
+            animation: movingT 1s forwards 2s ease-in-out;
+            transform: translateY(-550px);
+        }
+        p {
+            color: $white-color;
+            font-style: italic;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            &.text {
+                color: $primary;
+            }
+            &.text2 {
+                font-size: 12px;
+                letter-spacing: normal;
+            }
+        }
+        a {
+            margin-top: 10px;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 550;
+            background-color: $primary;
+            color: $white-color;
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            animation: fade 1s forwards 6s ease-in-out;
+            &:hover {
+                background: $white-color;
+                color: $black-color;
+            }
+        }
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 30px;
+        color: $white-color;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        padding: 40px 50px 60px;
+        background: $black-color;
+        color: $white-color;
+        opacity: .5;
+        cursor: pointer;
+        display: none;
+        transition: all 1s ease-in-out;
+    }
+    .swiper-button-prev:hover {
+        &::after {
+            color: $black-color;
+        }
+        background: $white-color;
+        opacity: 1;
+    }
+    .swiper-button-next:hover {
+        &::after {
+            color: $black-color;
+        }
+        background: $white-color;
+        opacity: 1;
+    }
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 50px;
+    }
+    .swiper-pagination {
+        span.swiper-pagination-bullet {
+            background-color: rgba($white-color, 1);
+            width: 15px;
+            height: 15px;
+        }
+        span.swiper-pagination-bullet-active {
+            background-color: white;
+        }
+    }
+    &:hover {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: block;
+        }
+    }
+}
+
+@keyframes moving {
+    to {
+        transform: translateX(0);
+    }
+    from {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movingT {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 769px) {
+    .swiper {
+        .content {
+            margin-top: 10em;
+        }
+        .slide1 {
+            .bg {
+                padding: 0px;
+            }
+        }
+        .content {
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    .swiper {
+        .content {
+            margin-top: 12em;
+            padding-left: 10px!important;
+        }
+        .slide1 {
+            .bg {
+                padding: 0px;
+            }
+        }
+        .content {
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            p {
+                font-size: .5rem;
+            }
+            a {
+                padding: 10px;
+            }
+        }
+    }
+}

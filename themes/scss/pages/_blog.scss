@@ -1,0 +1,172 @@
+        .blog {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+            background-color: white;
+            p {
+                font-size: 1.1rem;
+                letter-spacing: 5px;
+                font-style: italic;
+                color: rgba($black-color, .7);
+            }
+            h2 {
+                font-size: 3.2rem;
+                font-weight: bolder!important;
+                color: rgba($black-color, .7);
+            }
+            .swiper {
+                background-color: white;
+            }
+            .swiper-wrapper {
+                padding-top: 55px;
+            }
+            .swiper-slide {
+                transition: all .5s linear;
+                position: relative;
+                padding-top: 10px;
+                background-color: white;
+            }
+            .tooltiptext {
+                background-color: rgba($primary, 1);
+                top: -30px;
+                z-index: 1000;
+            }
+            .tooltiptext::after {
+                border-color: rgba($primary, 1) transparent transparent transparent;
+            }
+            .card {
+                cursor: pointer;
+                border: none;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 12px;
+                text-align: start;
+                border-radius: 0;
+                padding-top: 0px;
+                transition: all .5s ease-in-out;
+                &:hover {
+                    transform: translateY(10px);
+                }
+                .card-img {
+                    position: relative;
+                    transition: all .5s ease-in-out;
+                    &:hover {
+                        .card-content {
+                            display: block;
+                        }
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                    figure {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        background: #fff;
+                        overflow: hidden;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: all .3s ease-in-out;
+                        transform: scale(1);
+                    }
+                    .card-content {
+                        position: absolute;
+                        display: none;
+                        top: 0;
+                        color: $black-color;
+                        background: rgba($primary, 0.7);
+                        height: 100%;
+                        width: 100%;
+                        transition: all .5s linear;
+                        .links {
+                            margin: 30px;
+                            margin-top: 25%;
+                            justify-content: center;
+                            align-items: center;
+                            a {
+                                border-radius: 50%;
+                                padding: 20px 20px 20px 7px;
+                                transition: all .2s ease-in-out;
+                                &:hover {
+                                    svg {
+                                        color: rgba($black-color, .7);
+                                    }
+                                    background-color: white;
+                                    transform: translateY(-20px);
+                                }
+                            }
+                            svg {
+                                color: rgba($white-color, 0.9);
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    letter-spacing: normal;
+                    font-style: normal;
+                    color: rgba($secondary, .7);
+                    span {
+                        font-weight: bold;
+                    }
+                }
+                .card-title {
+                    font-weight: bold;
+                    color: rgba($black-color, .7);
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+            .swiper {
+                width: 100%;
+                height: 100vh;
+                padding: 10px;
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 80%!important;
+                }
+            }
+            .swiper-pagination-bullets.swiper-pagination-horizontal {
+                bottom: -6px;
+            }
+            .swiper-pagination {
+                span.swiper-pagination-bullet {
+                    background-color: rgba($primary, 0.9);
+                    width: 15px;
+                    height: 15px;
+                }
+                span.swiper-pagination-bullet-active {
+                    background-color: rgba($primary, 1);
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .blog {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                p {
+                    font-size: 1rem;
+                }
+                h2 {
+                    font-size: 1.8rem;
+                }
+                .card {
+                    p {
+                        font-size: 10px;
+                    }
+                }
+                .swiper {
+                    .swiper-slide {
+                        height: 100%;
+                    }
+                }
+            }
+        }

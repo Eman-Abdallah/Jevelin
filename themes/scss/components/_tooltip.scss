@@ -1,0 +1,66 @@
+.tool {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Tooltip text */
+
+.tooltiptext {
+    width: 60px;
+    background-color: #294cfe;
+    color: #fff;
+    text-align: center;
+    border: 3px solid $white-color;
+    padding: 5px 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1000;
+    top: -20px;
+}
+
+.tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #294cfe transparent transparent transparent;
+}
+
+.astrodivider {
+    margin: 30px auto;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+
+.astrodividermask {
+    overflow: hidden;
+    height: 1px;
+    background-color: rgba($secondary, .5);
+}
+
+.astrodivider span {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: -25px;
+    left: 45%;
+    margin-left: -25px;
+    background: #fff;
+    i {
+        font-size: 22px;
+        margin-left: 8px;
+        color: rgba($secondary, .3);
+    }
+    svg {
+        color: rgba($secondary, .5);
+    }
+}

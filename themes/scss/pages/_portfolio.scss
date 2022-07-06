@@ -1,0 +1,236 @@
+.devider {
+    margin: auto;
+    width: 100px;
+    height: 1px;
+    background-color: rgba($secondary, .4);
+}
+
+.portfolio {
+    text-align: center;
+    background-color: white;
+    p {
+        font-size: 25px;
+        font-style: italic;
+        color: rgba($secondary, .7);
+        margin-bottom: 15px;
+        letter-spacing: 5px;
+    }
+    h2 {
+        font-size: 45px;
+        font-weight: bolder!important;
+        margin-bottom: 20px;
+        color: rgba($black-color, .7);
+    }
+    .nav {
+        flex-wrap: nowrap;
+        margin: 20px 0px;
+    }
+    .devider2 {
+        width: 450px;
+        margin-bottom: 10px;
+    }
+    .nav-link {
+        border: none;
+        background-color: $white-color;
+        color: $secondary;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 5px;
+        margin-bottom: 20px;
+        transition: all .2s ease-in;
+        &.active,
+        &:hover {
+            color: $primary;
+            border-bottom: 3px solid $primary;
+        }
+    }
+    .card {
+        position: relative;
+        padding: 0;
+        margin: 0 !important;
+        overflow: hidden;
+        cursor: pointer;
+        align-self: center;
+        transition: all .2s ease-in;
+        &:hover {
+            .card-content {
+                display: flex;
+            }
+            img {
+                transform: scale(1.2, 1.2);
+            }
+        }
+    }
+    .card {
+        border: none!important;
+        border-radius: 0;
+    }
+    img {
+        width: 100%;
+        transform: scale(1.1, 1.1);
+        transition: all .3s ease-in-out;
+    }
+    .card-content {
+        position: absolute;
+        display: none;
+        padding-top: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $black-color;
+        background: rgba($primary, 0.7);
+        height: 100%;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        h4 {
+            color: $white-color;
+            font-size: 1.6rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .link {
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            a {
+                margin: auto;
+                text-align: center;
+                text-decoration: none;
+                color: rgba($white-color, 1);
+                font-size: 14px;
+                margin-left: 10px;
+            }
+        }
+        .links {
+            margin: 30px;
+            justify-content: center;
+            align-items: center;
+            a {
+                border-radius: 50%;
+                padding: 20px 20px 20px 7px;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    svg {
+                        color: rgba($black-color, .7);
+                    }
+                    background-color: white;
+                    transform: translateY(-10px);
+                }
+            }
+            svg {
+                color: rgba($white-color, 0.9);
+                margin-left: 20px;
+            }
+        }
+    }
+    .cards {
+        .col-lg-3 {
+            border: 0.1px solid rgba(149, 157, 165, 0.2);
+            border-top: none;
+            &.first {
+                padding: 180px 40px;
+                h2 {
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    font-style: italic;
+                    color: rgba($black-color, .7);
+                }
+                h1 {
+                    font-size: 3rem;
+                    font-weight: bolder!important;
+                    letter-spacing: 2px;
+                    color: rgba($black-color, .7);
+                }
+            }
+            &.second {
+                padding: 130px 40px;
+                svg {
+                    color: rgba($secondary, .7);
+                    margin-bottom: 15px;
+                }
+                h3 {
+                    font-size: 20px;
+                    color: rgba($black-color, .7);
+                    font-weight: bolder!important;
+                    margin-bottom: 15px;
+                    transition: all .2s ease-in;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                .divider {
+                    width: 50%;
+                    height: 1px;
+                    background-color: rgba($secondary, .2);
+                    margin: auto;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 14px;
+                    letter-spacing: normal;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:992px) and (max-width: 1100px) {
+    .portfolio {
+        .card-content {
+            padding-top: 50px;
+            h4 {
+                font-size: 1.1rem;
+            }
+        }
+        .cards {
+            .col-md-3 {
+                &.first {
+                    h2 {
+                        font-size: 1.1rem;
+                    }
+                    h1 {
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        .card-content {
+            padding-top: 100px;
+            h4 {
+                font-size: 2.1rem;
+            }
+        }
+        p {
+            font-size: 15px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        .nav-link {
+            padding: 5px;
+            font-size: 12px;
+        }
+        .cards {
+            .col-lg-3 {
+                &.first {
+                    h2 {
+                        font-size: 1rem;
+                    }
+                    h1 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .col-lg-3.first,
+            .col-lg-3.second {
+                padding: 40px;
+            }
+        }
+    }
+}

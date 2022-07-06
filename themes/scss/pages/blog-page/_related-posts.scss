@@ -1,0 +1,127 @@
+.related-posts {
+    a {
+        text-decoration: none;
+    }
+    figure {
+        width: 300px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        transform: scale(1);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: bolder!important;
+        color: rgba($black-color, .7);
+        margin: 15px 0;
+        padding: 10px 0;
+        border-bottom: .1px solid rgba($secondary, .2);
+    }
+    p {
+        font-size: 14px;
+        color: rgba($secondary, .5);
+    }
+    .swiper {
+        width: 100%;
+        height: 217px!important;
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 30px;
+            color: $white-color;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            background: transparent;
+            color: $white-color;
+            cursor: pointer;
+            top: 40%;
+        }
+        .swiper-button-prev {
+            left: 15%;
+        }
+        .swiper-button-next {
+            left: 70%;
+        }
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: 15px;
+        }
+    }
+}
+
+form {
+    padding-bottom: 20px;
+    label {
+        margin: 10px 0;
+        i {
+            color: #294cfe;
+            border: .1px solid #294cfe;
+            border-radius: 50%;
+            font-size: 12px;
+            padding: 2px;
+        }
+    }
+    input,
+    textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+    .d-flex {
+        .btn {
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        p {
+            color: rgba($secondary, .7);
+            font-size: 16px;
+        }
+        i {
+            color: #294cfe;
+            border: .1px solid #294cfe;
+            border-radius: 50%;
+            font-size: 12px;
+            padding: 2px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .related-posts {
+        .swiper {
+            .swiper-button-next {
+                left: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    form {
+        .d-flex {
+            align-items: center;
+            .btn {
+                padding: 5px !important;
+                font-weight: bold;
+                font-size: 10px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
